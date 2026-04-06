@@ -1,16 +1,35 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import HeroSection from "@/components/home/HeroSection";
+import LogoCarousel from "@/components/home/LogoCarousel";
+import WhyVeryfi from "@/components/home/WhyVeryfi";
+import ThreePillars from "@/components/home/ThreePillars";
+import TryItDemo from "@/components/home/TryItDemo";
+import IndustrySection from "@/components/home/IndustrySection";
+import DevSection from "@/components/home/DevSection";
+import SecuritySection from "@/components/home/SecuritySection";
+import BlogSection from "@/components/home/BlogSection";
+import MissionSection from "@/components/home/MissionSection";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main>
+        <HeroSection />
+        <LogoCarousel />
+        <WhyVeryfi />
+        <ThreePillars />
+        <TryItDemo />
+        <IndustrySection />
+        <DevSection />
+        <SecuritySection />
+        <BlogSection />
+        <MissionSection />
+      </main>
+      <Footer />
     </div>
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;

@@ -12,16 +12,16 @@ const DevSection = () => {
             <div className="bg-card border border-border rounded-xl p-6">
               <p className="text-xs text-muted-foreground mb-3 font-medium">Easy to Use RESTful APIs</p>
               <pre className="text-sm font-mono leading-relaxed">
-                <span className="text-blue-400">from</span>{" "}
+                <span className="text-accent">from</span>{" "}
                 <span className="text-primary">veryfi</span>{" "}
-                <span className="text-blue-400">import</span>{" "}
+                <span className="text-accent">import</span>{" "}
                 <span className="text-foreground">Client</span>
                 {"\n\n"}
                 <span className="text-foreground">my_client</span>{" "}
                 <span className="text-muted-foreground">=</span>{" "}
                 <span className="text-foreground">Client</span>
                 <span className="text-muted-foreground">().</span>
-                <span className="text-yellow-400">config_receipt</span>
+                <span className="text-foreground">config_receipt</span>
                 <span className="text-muted-foreground">(</span>
                 <span className="text-primary">"api-key"</span>
                 <span className="text-muted-foreground">)</span>
@@ -29,7 +29,7 @@ const DevSection = () => {
                 <span className="text-foreground">receipt_doc</span>{" "}
                 <span className="text-muted-foreground">=</span>{" "}
                 <span className="text-foreground">my_client.</span>
-                <span className="text-yellow-400">doc_from_path</span>
+                <span className="text-foreground">doc_from_path</span>
                 <span className="text-muted-foreground">(</span>
                 <span className="text-primary">"/path/to/receipt.jpg"</span>
                 <span className="text-muted-foreground">)</span>

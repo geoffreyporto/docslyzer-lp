@@ -78,25 +78,44 @@ const Navbar = () => {
                 </button>
                 {openDropdown === key && (
                   <div className="absolute top-full left-0 pt-1">
-                    <div className="bg-card border border-border rounded-lg shadow-xl py-2 min-w-[220px]">
-                      {items.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
-                        >
-                          {item.label}
-                          {item.badge && (
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                              item.badge === "Hot" ? "bg-red-500/20 text-red-400" :
-                              item.badge === "New" ? "bg-primary/20 text-primary" :
-                              "bg-blue-500/20 text-blue-400"
-                            }`}>
-                              {item.badge}
-                            </span>
-                          )}
-                        </Link>
-                      ))}
+                    <div className="bg-card border border-border rounded-lg shadow-xl py-3 min-w-[240px]">
+                      {(() => {
+                        const groups = items.reduce<Record<string, typeof items>>((acc, item) => {
+                          const g = item.group || "_default";
+                          if (!acc[g]) acc[g] = [];
+                          acc[g].push(item);
+                          return acc;
+                        }, {});
+                        const groupKeys = Object.keys(groups);
+                        return groupKeys.map((g, gi) => (
+                          <div key={g}>
+                            {g !== "_default" && (
+                              <div className="px-4 pt-2 pb-1 text-[10px] uppercase tracking-wider text-muted-foreground/60 font-semibold">
+                                {g}
+                              </div>
+                            )}
+                            {groups[g].map((item) => (
+                              <Link
+                                key={item.label}
+                                to={item.href}
+                                className="flex items-center gap-2 px-4 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+                              >
+                                {item.label}
+                                {item.badge && (
+                                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                                    item.badge === "Hot" ? "bg-red-500/20 text-red-400" :
+                                    item.badge === "New" ? "bg-primary/20 text-primary" :
+                                    "bg-blue-500/20 text-blue-400"
+                                  }`}>
+                                    {item.badge}
+                                  </span>
+                                )}
+                              </Link>
+                            ))}
+                            {gi < groupKeys.length - 1 && <div className="my-1.5 border-t border-border/50" />}
+                          </div>
+                        ));
+                      })()}
                     </div>
                   </div>
                 )}

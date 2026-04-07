@@ -1,0 +1,149 @@
+import { Link } from "react-router-dom";
+import { Check } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+
+const investors = [
+  { name: "New View Capital", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/new-view-capital.png", url: "https://nvc.vc/" },
+  { name: "Act One Ventures", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/act-one-ventures.png", url: "https://actoneventures.com/" },
+  { name: "Transpose Platform", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/transpose-platform.png", url: "#" },
+  { name: "Y Combinator", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/y-combinator.png", url: "https://www.ycombinator.com/" },
+];
+
+const leaders = [
+  {
+    name: "Ernest Semerda",
+    title: "Co-founder, Problem Solver",
+    image: "https://cdn.veryfi.com/wp-content/uploads/Ernest-Lifestyle-Square.jpg",
+    bio: "Ernest is a Polish-born, Australian-raised, and American-matured professional based in Silicon Valley. A serial entrepreneur, he previously founded a medical logistics company that connected hospitals to ambulances.",
+  },
+  {
+    name: "Dmitry Birulia",
+    title: "Co-founder, Obstacle Crusher",
+    image: "https://cdn.veryfi.com/wp-content/uploads/Life-Style-Square-1.jpg",
+    bio: "Dmitry is a hacker and entrepreneur with an extensive background in Computer Vision and Machine Learning. Notably, he became the first Belarusian to participate in the prestigious YCombinator program.",
+  },
+];
+
+const apiFeatures = [
+  "Trained on hundreds of millions of real documents like receipts, invoices, and more.",
+  "Trained on our own DGX H100s in our Santa Clara data center.",
+  "Infra on AWS Global with strategic locations worldwide for compliance and speed.",
+  "Continuously refined by our ML team of experts and veterans.",
+  "Flexible for everyone from startups to enterprise-scale deployments.",
+];
+
+const About = () => {
+  return (
+    <div className="min-h-screen bg-background">
+      <Navbar />
+      <main className="pt-24 pb-20">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero */}
+          <div className="text-center mb-20">
+            <h1 className="text-4xl md:text-6xl font-bold text-foreground mb-6">
+              Liberating human potential through the power of AI
+            </h1>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto mb-8">
+              At Docslyzer, we see data as the ultimate raw material for digital innovation. We're building a flexible, modular platform that puts powerful AI tools in your hands to turn dreams into reality.
+            </p>
+            <div className="flex items-center justify-center gap-4">
+              <Link to="/register" className="bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors">
+                Get Started for Free
+              </Link>
+              <Link to="/demo" className="border border-border text-foreground px-8 py-3 rounded-full text-sm font-semibold hover:border-primary/50 transition-colors">
+                Free Demo
+              </Link>
+            </div>
+          </div>
+
+          {/* 4th Industrial Revolution */}
+          <section className="mb-20">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              🌍 Powering the Next Chapter of Human Innovation
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-6">
+              Welcome to the 4th Industrial Revolution. While the world evolved from steam to electricity to digital, we're now witnessing something even bigger: AI isn't just another technological leap – it's humanity's next great power source. But here's the thing: only 13% of businesses have harnessed AI's true potential to slash costs and fuel growth. The rest? Still stuck in the manual data dark ages. That's where Docslyzer comes in.
+            </p>
+            <p className="text-muted-foreground leading-relaxed">
+              We're not just building another tech platform. We're liberating human potential by transforming raw data into pure business power. Think of us as your guides into a future where manual data entry is as outdated as steam engines, where AI-driven insights fuel personalized experiences, and where businesses can finally focus on what matters: innovation and growth.
+            </p>
+          </section>
+
+          {/* Investors */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold text-foreground text-center mb-10">Investors</h2>
+            <div className="flex flex-wrap items-center justify-center gap-10">
+              {investors.map((inv) => (
+                <a key={inv.name} href={inv.url} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
+                  <img src={inv.logo} alt={inv.name} className="h-12 w-auto" loading="lazy" />
+                </a>
+              ))}
+            </div>
+          </section>
+
+          {/* Team Photo */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold text-foreground text-center mb-10">Team</h2>
+            <div className="rounded-2xl overflow-hidden">
+              <img
+                src="https://cdn.veryfi.com/wp-content/uploads/team-veryfi-at-work-1.jpg"
+                alt="Team Docslyzer"
+                className="w-full h-auto object-cover"
+                loading="lazy"
+              />
+            </div>
+          </section>
+
+          {/* Leadership */}
+          <section className="mb-20">
+            <h2 className="text-3xl font-bold text-foreground text-center mb-10">Leadership</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              {leaders.map((leader) => (
+                <div key={leader.name} className="bg-card border border-border rounded-2xl p-8 flex flex-col items-center text-center">
+                  <img src={leader.image} alt={leader.name} className="w-40 h-40 rounded-full object-cover mb-6" loading="lazy" />
+                  <h3 className="text-xl font-bold text-foreground">{leader.name}</h3>
+                  <p className="text-sm text-primary mb-4">{leader.title}</p>
+                  <p className="text-sm text-muted-foreground">{leader.bio}</p>
+                </div>
+              ))}
+            </div>
+          </section>
+
+          {/* AI Section */}
+          <section className="mb-20 bg-card border border-border rounded-2xl p-8 md:p-12">
+            <h2 className="text-3xl font-bold text-foreground mb-6">
+              We have been doing AI before it became sexy
+            </h2>
+            <p className="text-muted-foreground leading-relaxed mb-8">
+              We are a Silicon Valley team of builders and have been building precise large machine models (deterministic and non-deterministic) on our NVIDIA DGX H100s for years. We've built an impenetrable AI fortress with security at its core because we value privacy of your documents and data.
+            </p>
+            <p className="text-sm font-semibold text-foreground mb-4">Each API is:</p>
+            <ul className="space-y-3">
+              {apiFeatures.map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <Check className="h-4 w-4 text-primary mt-0.5 flex-shrink-0" />
+                  {f}
+                </li>
+              ))}
+            </ul>
+          </section>
+
+          {/* CTA */}
+          <div className="text-center">
+            <h2 className="text-3xl font-bold text-foreground mb-4">Learn More</h2>
+            <p className="text-muted-foreground mb-8">
+              Discover why Docslyzer is the preferred choice for forward-thinking companies integrating AI into their workflows and business processes.
+            </p>
+            <Link to="/why-docslyzer" className="bg-primary text-primary-foreground px-8 py-3 rounded-full text-sm font-semibold hover:bg-primary/90 transition-colors">
+              Why Docslyzer
+            </Link>
+          </div>
+        </div>
+      </main>
+      <Footer />
+    </div>
+  );
+};
+
+export default About;

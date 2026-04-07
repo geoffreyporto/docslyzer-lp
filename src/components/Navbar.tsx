@@ -46,12 +46,12 @@ const Navbar = () => {
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
           <Link to="/" className="flex items-center">
-            <svg viewBox="0 0 120 30" className="h-7 w-auto" fill="none">
+            <svg viewBox="0 0 200 30" className="h-7 w-auto" fill="none">
               <text x="0" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="white">
-                very
+                Docs
               </text>
-              <text x="56" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="hsl(160,100%,45%)">
-                fi
+              <text x="62" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="hsl(160,100%,45%)">
+                lyzer
               </text>
             </svg>
           </Link>

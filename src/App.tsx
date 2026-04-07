@@ -9,6 +9,12 @@ import Demo from "./pages/Demo.tsx";
 import About from "./pages/About.tsx";
 import Security from "./pages/Security.tsx";
 import Contact from "./pages/Contact.tsx";
+import ReceiptOcrApi from "./pages/ReceiptOcrApi.tsx";
+import InvoiceOcrApi from "./pages/InvoiceOcrApi.tsx";
+import BankCheckOcrApi from "./pages/BankCheckOcrApi.tsx";
+import DataExtraction from "./pages/DataExtraction.tsx";
+import DocumentCapture from "./pages/DocumentCapture.tsx";
+import FraudDetection from "./pages/FraudDetection.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -26,6 +32,12 @@ const App = () => (
           <Route path="/about" element={<About />} />
           <Route path="/security" element={<Security />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/receipt-ocr-api" element={<ReceiptOcrApi />} />
+          <Route path="/invoice-ocr-api" element={<InvoiceOcrApi />} />
+          <Route path="/bank-check-ocr-api" element={<BankCheckOcrApi />} />
+          <Route path="/data-extraction" element={<DataExtraction />} />
+          <Route path="/document-capture" element={<DocumentCapture />} />
+          <Route path="/fraud-detection" element={<FraudDetection />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

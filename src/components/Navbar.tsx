@@ -2,29 +2,34 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { ChevronDown, Search, Menu, X } from "lucide-react";
 
-const navDropdowns: Record<string, { label: string; href: string; badge?: string }[]> = {
+const navDropdowns: Record<string, { label: string; href: string; badge?: string; group?: string }[]> = {
   Solutions: [
-    { label: "FinTech", href: "/solutions/fintech" },
-    { label: "CPG Brands", href: "/solutions/cpg-loyalty-program" },
-    { label: "Backoffice Automation", href: "/solutions/accounts-payable-automation" },
-    { label: "Construction", href: "/solutions/construction" },
-    { label: "Healthcare", href: "/solutions/healthcare" },
-    { label: "Real Estate", href: "/solutions/real-estate" },
+    { label: "FinTech", href: "/solutions/fintech", group: "Industries" },
+    { label: "CPG Brands", href: "/solutions/cpg-loyalty-program", group: "Industries" },
+    { label: "Backoffice Automation", href: "/solutions/accounts-payable-automation", group: "Industries" },
+    { label: "Construction", href: "/solutions/construction", group: "Industries" },
+    { label: "Healthcare", href: "/solutions/healthcare", group: "Industries" },
+    { label: "Real Estate", href: "/solutions/real-estate", group: "Industries" },
+    { label: "Embedded Solutions", href: "/embedded", group: "No-Code", badge: "New" },
+    { label: "Workflows", href: "/workflows", group: "No-Code", badge: "New" },
+    { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot", group: "No-Code", badge: "Popular" },
   ],
   Platform: [
-    { label: "Document Capture", href: "/document-capture" },
-    { label: "Data Extraction APIs", href: "/data-extraction" },
-    { label: "Fraud Detection", href: "/fraud-detection", badge: "Hot" },
-    { label: "Product Intelligence", href: "/product-intelligence" },
-    { label: "Embedded", href: "/embedded", badge: "New" },
-    { label: "Workflows", href: "/workflow-automation", badge: "New" },
-    { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot", badge: "Popular" },
+    { label: "Document Capture", href: "/document-capture", group: "Capture" },
+    { label: "Data Extraction APIs", href: "/data-extraction", group: "Extraction" },
+    { label: "Receipt OCR API", href: "/receipt-ocr-api", group: "Extraction" },
+    { label: "Invoice OCR API", href: "/invoice-ocr-api", group: "Extraction" },
+    { label: "Bank Check OCR", href: "/bank-check-ocr-api", group: "Extraction" },
+    { label: "W-2 OCR API", href: "/w2-ocr-api", group: "Extraction" },
+    { label: "W-9 OCR API", href: "/w9-ocr-api", group: "Extraction" },
+    { label: "Bank Statements OCR", href: "/bank-statements-ocr-api", group: "Extraction" },
+    { label: "Fraud Detection", href: "/fraud-detection", group: "Add-ons", badge: "Hot" },
   ],
   Developers: [
-    { label: "Dev Resources", href: "/developers" },
-    { label: "API Documentation", href: "/api" },
-    { label: "Free SDKs on GitHub", href: "/sdks" },
-    { label: "Postman Collections", href: "/postman" },
+    { label: "Developer Hub", href: "/developers" },
+    { label: "API Documentation", href: "/developers/docs" },
+    { label: "Free SDKs on GitHub", href: "https://github.com/docslyzer" },
+    { label: "Postman Collections", href: "/developers/postman" },
   ],
   Resources: [
     { label: "Blog", href: "/blog" },
@@ -33,6 +38,7 @@ const navDropdowns: Record<string, { label: string; href: string; badge?: string
     { label: "Security & Compliance", href: "/security" },
     { label: "About Us", href: "/about" },
     { label: "Careers", href: "/careers" },
+    { label: "Contact", href: "/contact" },
   ],
 };
 
@@ -72,25 +78,44 @@ const Navbar = () => {
                 </button>
                 {openDropdown === key && (
                   <div className="absolute top-full left-0 pt-1">
-                    <div className="bg-card border border-border rounded-lg shadow-xl py-2 min-w-[220px]">
-                      {items.map((item) => (
-                        <Link
-                          key={item.label}
-                          to={item.href}
-                          className="flex items-center gap-2 px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
-                        >
-                          {item.label}
-                          {item.badge && (
-                            <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
-                              item.badge === "Hot" ? "bg-red-500/20 text-red-400" :
-                              item.badge === "New" ? "bg-primary/20 text-primary" :
-                              "bg-blue-500/20 text-blue-400"
-                            }`}>
-                              {item.badge}
-                            </span>
-                          )}
-                        </Link>
-                      ))}
+                    <div className="bg-card border border-border rounded-lg shadow-xl py-3 min-w-[240px]">
+                      {(() => {
+                        const groups = items.reduce<Record<string, typeof items>>((acc, item) => {
+                          const g = item.group || "_default";
+                          if (!acc[g]) acc[g] = [];
+                          acc[g].push(item);
+                          return acc;
+                        }, {});
+                        const groupKeys = Object.keys(groups);
+                        return groupKeys.map((g, gi) => (
+                          <div key={g}>
+                            {g !== "_default" && (
+                              <div className="px-4 pt-2 pb-1 text-[10px] uppercase tracking-wider text-muted-foreground/60 font-semibold">
+                                {g}
+                              </div>
+                            )}
+                            {groups[g].map((item) => (
+                              <Link
+                                key={item.label}
+                                to={item.href}
+                                className="flex items-center gap-2 px-4 py-1.5 text-sm text-muted-foreground hover:text-foreground hover:bg-muted/50 transition-colors"
+                              >
+                                {item.label}
+                                {item.badge && (
+                                  <span className={`text-[10px] px-1.5 py-0.5 rounded-full font-medium ${
+                                    item.badge === "Hot" ? "bg-red-500/20 text-red-400" :
+                                    item.badge === "New" ? "bg-primary/20 text-primary" :
+                                    "bg-blue-500/20 text-blue-400"
+                                  }`}>
+                                    {item.badge}
+                                  </span>
+                                )}
+                              </Link>
+                            ))}
+                            {gi < groupKeys.length - 1 && <div className="my-1.5 border-t border-border/50" />}
+                          </div>
+                        ));
+                      })()}
                     </div>
                   </div>
                 )}

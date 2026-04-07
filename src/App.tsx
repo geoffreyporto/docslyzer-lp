@@ -15,6 +15,17 @@ import BankCheckOcrApi from "./pages/BankCheckOcrApi.tsx";
 import DataExtraction from "./pages/DataExtraction.tsx";
 import DocumentCapture from "./pages/DocumentCapture.tsx";
 import FraudDetection from "./pages/FraudDetection.tsx";
+import Customers from "./pages/Customers.tsx";
+import Blog from "./pages/Blog.tsx";
+import Careers from "./pages/Careers.tsx";
+import WhyDocslyzer from "./pages/WhyDocslyzer.tsx";
+import Embedded from "./pages/Embedded.tsx";
+import Workflows from "./pages/Workflows.tsx";
+import WhatsappChatbot from "./pages/WhatsappChatbot.tsx";
+import W2OcrApi from "./pages/W2OcrApi.tsx";
+import W9OcrApi from "./pages/W9OcrApi.tsx";
+import BankStatementsOcrApi from "./pages/BankStatementsOcrApi.tsx";
+import Developers from "./pages/Developers.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -38,6 +49,17 @@ const App = () => (
           <Route path="/data-extraction" element={<DataExtraction />} />
           <Route path="/document-capture" element={<DocumentCapture />} />
           <Route path="/fraud-detection" element={<FraudDetection />} />
+          <Route path="/customers" element={<Customers />} />
+          <Route path="/blog" element={<Blog />} />
+          <Route path="/careers" element={<Careers />} />
+          <Route path="/why-docslyzer" element={<WhyDocslyzer />} />
+          <Route path="/embedded" element={<Embedded />} />
+          <Route path="/workflows" element={<Workflows />} />
+          <Route path="/whatsapp-chatbot" element={<WhatsappChatbot />} />
+          <Route path="/w2-ocr-api" element={<W2OcrApi />} />
+          <Route path="/w9-ocr-api" element={<W9OcrApi />} />
+          <Route path="/bank-statements-ocr-api" element={<BankStatementsOcrApi />} />
+          <Route path="/developers" element={<Developers />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

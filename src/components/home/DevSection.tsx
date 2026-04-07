@@ -13,7 +13,7 @@ const DevSection = () => {
               <p className="text-xs text-muted-foreground mb-3 font-medium">Easy to Use RESTful APIs</p>
               <pre className="text-sm font-mono leading-relaxed">
                 <span className="text-accent">from</span>{" "}
-                <span className="text-primary">veryfi</span>{" "}
+                <span className="text-primary">docslyzer</span>{" "}
                 <span className="text-accent">import</span>{" "}
                 <span className="text-foreground">Client</span>
                 {"\n\n"}
@@ -38,7 +38,7 @@ const DevSection = () => {
             <div className="bg-card border border-border rounded-xl p-6">
               <p className="text-xs text-muted-foreground mb-3 font-medium">Mobile Capture Framework</p>
               <pre className="text-sm font-mono text-muted-foreground leading-relaxed">
-                <span className="text-primary">$</span> node server.js && veryfi listen
+                <span className="text-primary">$</span> node server.js && docslyzer listen
                 {"\n"}
                 <span className="text-muted-foreground">&gt; Ready! Waiting for requests...</span>
                 {"\n\n"}
@@ -79,7 +79,7 @@ const DevSection = () => {
                 Dev Resources
               </Link>
               <a
-                href="https://github.com/veryfi"
+                href="https://github.com/docslyzer"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="border border-border text-foreground px-6 py-2.5 rounded-full text-sm font-medium hover:border-primary/50 transition-colors"

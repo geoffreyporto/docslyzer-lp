@@ -45,10 +45,10 @@
     --sidebar-border: 222 30% 18%;
     --sidebar-ring: 160 100% 45%;
 
-    --veryfi-navy: 228 35% 13%;
-    --veryfi-green: 160 100% 45%;
-    --veryfi-dark: 228 40% 10%;
-    --veryfi-gray: 220 10% 65%;
+    --docslyzer-navy: 228 35% 13%;
+    --docslyzer-green: 160 100% 45%;
+    --docslyzer-dark: 228 40% 10%;
+    --docslyzer-gray: 220 10% 65%;
   }
 
   .dark {

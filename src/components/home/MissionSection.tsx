@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 
 const MissionSection = () => {
   return (
-    <section className="py-20 bg-veryfi-dark/30">
+    <section className="py-20 bg-docslyzer-dark/30">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
@@ -10,7 +10,7 @@ const MissionSection = () => {
               For the advancement of humankind.
             </h2>
             <p className="text-muted-foreground leading-relaxed mb-8">
-              From finance and insurance to healthcare and education, data shapes our world. Veryfi exists to liberate human potential by making data available and actionable.
+              From finance and insurance to healthcare and education, data shapes our world. Docslyzer exists to liberate human potential by making data available and actionable.
             </p>
             <div className="flex items-center gap-4">
               <Link
@@ -29,8 +29,8 @@ const MissionSection = () => {
           </div>
           <div className="rounded-2xl overflow-hidden">
             <img
-              src="https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/team-veryfi-work.jpg"
-              alt="Team Veryfi"
+              src="https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/team-docslyzer-work.jpg"
+              alt="Team Docslyzer"
               className="w-full h-auto object-cover"
               loading="lazy"
             />

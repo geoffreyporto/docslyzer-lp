@@ -22,16 +22,16 @@ const benefits = [
   },
 ];
 
-const WhyVeryfi = () => {
+const WhyDocslyzer = () => {
   return (
     <section className="py-20">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <Link
-            to="/why-veryfi"
+            to="/why-docslyzer"
             className="inline-flex items-center gap-2 text-primary font-semibold text-lg hover:underline"
           >
-            Why Veryfi
+            Why Docslyzer
           </Link>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -54,4 +54,4 @@ const WhyVeryfi = () => {
   );
 };
 
-export default WhyVeryfi;
+export default WhyDocslyzer;

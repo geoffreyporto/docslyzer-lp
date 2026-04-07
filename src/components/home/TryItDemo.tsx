@@ -56,7 +56,7 @@ const TryItDemo = () => {
           {/* Left: Document preview */}
           <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center min-h-[400px]">
             <img
-              src="https://app.veryfi.com/api-demo/static/demos/receipt/receipt.jpeg"
+              src="https://app.docslyzer.com/api-demo/static/demos/receipt/receipt.jpeg"
               alt="Sample receipt"
               className="max-h-[350px] rounded-lg shadow-lg"
               loading="lazy"
@@ -90,7 +90,7 @@ const TryItDemo = () => {
                 <div className="space-y-6">
                   {/* Vendor info */}
                   <div className="flex items-start gap-4">
-                    <img src="https://cdn.veryfi.com/logos/us/126568182.jpeg" alt="Walgreens" className="w-12 h-12 rounded-lg object-cover" />
+                    <img src="https://cdn.docslyzer.com/logos/us/126568182.jpeg" alt="Walgreens" className="w-12 h-12 rounded-lg object-cover" />
                     <div>
                       <h3 className="text-lg font-bold text-foreground">{receiptData.vendor.name}</h3>
                       <p className="text-xs text-muted-foreground">{receiptData.vendor.address}</p>

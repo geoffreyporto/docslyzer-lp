@@ -4,7 +4,7 @@ const HeroSection = () => {
   return (
     <section className="relative pt-32 pb-20 overflow-hidden">
       {/* Background gradient */}
-      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-veryfi-dark" />
+      <div className="absolute inset-0 bg-gradient-to-b from-background via-background to-docslyzer-dark" />
       
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
         <h1 className="text-5xl md:text-7xl font-bold text-foreground mb-6 tracking-tight">

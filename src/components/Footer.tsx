@@ -40,7 +40,7 @@ const footerLinks = {
 
 const Footer = () => {
   return (
-    <footer className="bg-veryfi-dark border-t border-border">
+    <footer className="bg-docslyzer-dark border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
           {Object.entries(footerLinks).map(([category, links]) => (
@@ -64,11 +64,11 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <svg viewBox="0 0 120 30" className="h-6 w-auto" fill="none">
-              <text x="0" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="white">very</text>
-              <text x="56" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="hsl(160,100%,45%)">fi</text>
+            <svg viewBox="0 0 200 30" className="h-6 w-auto" fill="none">
+              <text x="0" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="white">Docs</text>
+              <text x="62" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="hsl(160,100%,45%)">lyzer</text>
             </svg>
-            <span className="text-xs text-muted-foreground ml-4">© {new Date().getFullYear()} Veryfi, Inc. All rights reserved.</span>
+            <span className="text-xs text-muted-foreground ml-4">© {new Date().getFullYear()} Docslyzer, Inc. All rights reserved.</span>
           </div>
           <div className="flex items-center gap-4">
             {["Twitter", "LinkedIn", "GitHub", "YouTube"].map((social) => (

@@ -29,7 +29,7 @@ const navDropdowns: Record<string, { label: string; href: string; badge?: string
   Resources: [
     { label: "Blog", href: "/blog" },
     { label: "Customer Stories", href: "/customers" },
-    { label: "Why Veryfi", href: "/why-veryfi" },
+    { label: "Why Docslyzer", href: "/why-docslyzer" },
     { label: "Security & Compliance", href: "/security" },
     { label: "About Us", href: "/about" },
     { label: "Careers", href: "/careers" },

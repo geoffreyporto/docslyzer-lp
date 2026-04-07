@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import HeroSection from "@/components/home/HeroSection";
 import LogoCarousel from "@/components/home/LogoCarousel";
-import WhyVeryfi from "@/components/home/WhyVeryfi";
+import WhyDocslyzer from "@/components/home/WhyDocslyzer";
 import ThreePillars from "@/components/home/ThreePillars";
 import TryItDemo from "@/components/home/TryItDemo";
 import IndustrySection from "@/components/home/IndustrySection";
@@ -18,7 +18,7 @@ const Index = () => {
       <main>
         <HeroSection />
         <LogoCarousel />
-        <WhyVeryfi />
+        <WhyDocslyzer />
         <ThreePillars />
         <TryItDemo />
         <IndustrySection />

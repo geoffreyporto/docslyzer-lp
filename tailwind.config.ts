@@ -60,11 +60,11 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
-        veryfi: {
-          navy: "hsl(var(--veryfi-navy))",
-          green: "hsl(var(--veryfi-green))",
-          dark: "hsl(var(--veryfi-dark))",
-          gray: "hsl(var(--veryfi-gray))",
+        docslyzer: {
+          navy: "hsl(var(--docslyzer-navy))",
+          green: "hsl(var(--docslyzer-green))",
+          dark: "hsl(var(--docslyzer-dark))",
+          gray: "hsl(var(--docslyzer-gray))",
         },
       },
       borderRadius: {

@@ -7,7 +7,7 @@ const SecuritySection = () => {
         <div className="bg-card border border-border rounded-2xl p-8 md:p-12 flex flex-col md:flex-row items-center gap-8">
           <div className="flex-shrink-0">
             <img
-              src="https://cdn.veryfi.com/wp-content/uploads/docslyzer-soc2-type2-compliant.png"
+              src="https://cdn.veryfi.com/wp-content/uploads/veryfi-soc2-type2-compliant.png"
               alt="SOC 2 Type II Certified"
               className="w-32 h-32 object-contain"
               loading="lazy"

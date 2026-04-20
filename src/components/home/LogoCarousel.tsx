@@ -1,11 +1,11 @@
 const logos = [
-  { name: "Navan", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Navan-ocr-powered-by-Docslyzer.svg?2023080701" },
-  { name: "Rippling", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Rippling-ocr-powered-by-Docslyzer.svg?2023080701" },
-  { name: "Merkle", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Merkle-ocr-powered-by-Docslyzer.svg?2023080701" },
-  { name: "Square", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Square-ocr-powered-by-Docslyzer.svg?2023080701" },
-  { name: "Volvo", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Volvo-ocr-powered-by-Docslyzer.svg?2023080701" },
-  { name: "Abbott", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Abbott-ocr-powered-by-docslyzer.svg?2023080902" },
-  { name: "PepsiCo", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/PepsiCo-ocr-powered-by-Docslyzer.svg?2023080701" },
+  { name: "Navan", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Navan-ocr-powered-by-Veryfi.svg?2023080701" },
+  { name: "Rippling", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Rippling-ocr-powered-by-Veryfi.svg?2023080701" },
+  { name: "Merkle", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Merkle-ocr-powered-by-Veryfi.svg?2023080701" },
+  { name: "Square", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Square-ocr-powered-by-Veryfi.svg?2023080701" },
+  { name: "Volvo", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Volvo-ocr-powered-by-Veryfi.svg?2023080701" },
+  { name: "Abbott", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/Abbott-ocr-powered-by-veryfi.svg?2023080902" },
+  { name: "PepsiCo", url: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/powered-by/PepsiCo-ocr-powered-by-Veryfi.svg?2023080701" },
 ];
 
 const LogoCarousel = () => {

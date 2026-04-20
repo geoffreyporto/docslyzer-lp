@@ -5,7 +5,7 @@ const Notaries = () => (
     industry="Notaries"
     title="OCR and AI extraction for notarial offices"
     subtitle="Process IDs, deeds, powers of attorney and notarized documents at scale — with stamp, seal and signature detection."
-    heroImage="https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/solutions-2a.svg"
+    heroImage="https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/Card_Illustration_Notary.svg"
     intro="Notaries authenticate hundreds of documents every day. Docslyzer extracts every relevant field — names, IDs, dates, amounts, stamps and signatures — and routes the data into your notarial archive or case management system, while preserving original layout and chain of custody."
     useCases={[
       { title: "ID & passport verification", description: "Capture INE, passport, birth certificate and driver license data with fraud checks." },

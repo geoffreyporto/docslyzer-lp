@@ -4,37 +4,37 @@ const industries = [
   {
     title: "FinTech",
     description: "Build the next-gen fintech app with our OCR APIs. Implement instant receipt capture, extract line-item data for expense policies, process bill payments with Level 3 card data, and power your ERP integrations.",
-    image: "https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/solutions/solutions-2a.svg",
+    image: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/solutions-2a.svg",
     href: "/solutions/fintech",
   },
   {
     title: "CPG Brands",
     description: "Code loyalty experiences that convert. Integrate our mobile SDK for long-receipt capture, validate purchases in real-time without third-party delays, and build fraud detection right into your app.",
-    image: "https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/solutions/loyalty-program-solutions.svg",
+    image: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/loyalty-program-solutions.svg",
     href: "/solutions/cpg-loyalty-program",
   },
   {
     title: "Backoffice Automation",
     description: "Eliminate data entry bottlenecks in your workflow automation. Hook our APIs into your RPA platform, extract structured data from invoices and receipts with 99%+ accuracy.",
-    image: "https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/solutions/solutions-1a.svg",
+    image: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/solutions-1a.svg",
     href: "/solutions/accounts-payable-automation",
   },
   {
     title: "Construction",
     description: "Digitize construction workflows with intelligent document processing. Extract data from blueprints, invoices, timesheets, and compliance docs via API.",
-    image: "https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/solutions/Construction-Hero-Image-DM.svg",
+    image: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/Construction-Hero-Image-DM.svg",
     href: "/solutions/construction",
   },
   {
     title: "Healthcare",
     description: "Build HIPAA-compliant healthcare apps with confidence. Integrate our APIs to capture insurance cards, extract patient data, automate claims processing.",
-    image: "https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/solutions/Card_Illustration_Healthcare.svg",
+    image: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/Card_Illustration_Healthcare.svg",
     href: "/solutions/healthcare",
   },
   {
     title: "Real Estate",
     description: "Power property management platforms with intelligent document processing. Extract data from receipts, invoices, lease agreements with 99.9% accuracy.",
-    image: "https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/solutions/Real-Estate-Hero-Image.svg",
+    image: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/solutions/Real-Estate-Hero-Image.svg",
     href: "/solutions/real-estate",
   },
 ];
@@ -67,7 +67,7 @@ const IndustrySection = () => {
               <p className="text-sm text-muted-foreground leading-relaxed">{industry.description}</p>
               <div className="mt-4 flex items-center gap-2 text-primary text-sm font-medium group-hover:gap-3 transition-all">
                 Discover More
-                <img src="https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/Icon-LearnMore.svg" alt="" className="w-4 h-4" />
+                <img src="https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/Icon-LearnMore.svg" alt="" className="w-4 h-4" />
               </div>
             </Link>
           ))}

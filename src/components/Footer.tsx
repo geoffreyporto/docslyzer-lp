@@ -64,10 +64,10 @@ const Footer = () => {
 
         <div className="mt-12 pt-8 border-t border-border flex flex-col md:flex-row items-center justify-between gap-4">
           <div className="flex items-center gap-2">
-            <svg viewBox="0 0 200 30" className="h-6 w-auto" fill="none">
-              <text x="0" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="white">Docs</text>
-              <text x="62" y="24" fontFamily="Inter" fontWeight="700" fontSize="24" fill="hsl(160,100%,45%)">lyzer</text>
-            </svg>
+            <span className="text-xl font-bold tracking-tight">
+              <span className="text-foreground">Docs</span>
+              <span className="text-accent">lyzer</span>
+            </span>
             <span className="text-xs text-muted-foreground ml-4">© {new Date().getFullYear()} Docslyzer, Inc. All rights reserved.</span>
           </div>
           <div className="flex items-center gap-4">

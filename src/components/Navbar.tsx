@@ -4,12 +4,12 @@ import { ChevronDown, Search, Menu, X } from "lucide-react";
 
 const navDropdowns: Record<string, { label: string; href: string; badge?: string; group?: string }[]> = {
   Solutions: [
-    { label: "FinTech", href: "/solutions/fintech", group: "Industries" },
-    { label: "CPG Brands", href: "/solutions/cpg-loyalty-program", group: "Industries" },
-    { label: "Backoffice Automation", href: "/solutions/accounts-payable-automation", group: "Industries" },
-    { label: "Construction", href: "/solutions/construction", group: "Industries" },
-    { label: "Healthcare", href: "/solutions/healthcare", group: "Industries" },
+    { label: "Legal", href: "/solutions/legal", group: "Industries" },
+    { label: "Constructors", href: "/solutions/constructors", group: "Industries" },
+    { label: "Notaries", href: "/solutions/notaries", group: "Industries" },
     { label: "Real Estate", href: "/solutions/real-estate", group: "Industries" },
+    { label: "Fintech", href: "/solutions/fintech", group: "Industries" },
+    { label: "Education", href: "/solutions/education", group: "Industries" },
     { label: "Embedded Solutions", href: "/embedded", group: "No-Code", badge: "New" },
     { label: "Workflows", href: "/workflows", group: "No-Code", badge: "New" },
     { label: "WhatsApp Chatbot", href: "/whatsapp-chatbot", group: "No-Code", badge: "Popular" },

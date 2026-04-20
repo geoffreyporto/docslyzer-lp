@@ -118,10 +118,10 @@ const Navbar = () => {
               </div>
             ))}
             <Link to="/pricing" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-              PRICING
+              Pricing
             </Link>
             <Link to="/demo" className="px-3 py-2 text-sm text-muted-foreground hover:text-foreground transition-colors">
-              DEMO
+              Demo
             </Link>
           </div>
 

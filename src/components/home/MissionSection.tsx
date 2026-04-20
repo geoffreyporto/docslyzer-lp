@@ -29,7 +29,7 @@ const MissionSection = () => {
           </div>
           <div className="rounded-2xl overflow-hidden">
             <img
-              src="https://cdn.docslyzer.com/wp-content/themes/docslyzer_2.0/assets/images/team-docslyzer-work.jpg"
+              src="https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/team-docslyzer-work.jpg"
               alt="Team Docslyzer"
               className="w-full h-auto object-cover"
               loading="lazy"

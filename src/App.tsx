@@ -29,6 +29,9 @@ import Developers from "./pages/Developers.tsx";
 import Legal from "./pages/solutions/Legal.tsx";
 import Constructors from "./pages/solutions/Constructors.tsx";
 import Notaries from "./pages/solutions/Notaries.tsx";
+import RealEstate from "./pages/solutions/RealEstate.tsx";
+import Fintech from "./pages/solutions/Fintech.tsx";
+import Education from "./pages/solutions/Education.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -66,6 +69,9 @@ const App = () => (
           <Route path="/solutions/legal" element={<Legal />} />
           <Route path="/solutions/constructors" element={<Constructors />} />
           <Route path="/solutions/notaries" element={<Notaries />} />
+          <Route path="/solutions/real-estate" element={<RealEstate />} />
+          <Route path="/solutions/fintech" element={<Fintech />} />
+          <Route path="/solutions/education" element={<Education />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

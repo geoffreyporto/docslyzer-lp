@@ -1,12 +1,22 @@
 import { useState } from "react";
 import demoReceipt from "@/assets/demo-receipt.jpg";
 import demoInvoice from "@/assets/demo-invoice.jpg";
+import demoIne from "@/assets/demo-ine.jpg";
+import demoPassport from "@/assets/demo-passport.jpg";
+import demoBirth from "@/assets/demo-birth.jpg";
+import demoCheck from "@/assets/demo-check.jpg";
+import demoBankStatement from "@/assets/demo-bankstatement.jpg";
 
 const tabs = ["Receipt", "Invoice", "INE", "Pasaport", "Birth certificate", "Check", "Bank Statement"];
 
 const sampleImages: Record<string, string> = {
   Receipt: demoReceipt,
   Invoice: demoInvoice,
+  INE: demoIne,
+  Pasaport: demoPassport,
+  "Birth certificate": demoBirth,
+  Check: demoCheck,
+  "Bank Statement": demoBankStatement,
 };
 
 const receiptData = {

@@ -3,7 +3,7 @@ import { Upload } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 
-const tabs = ["Receipt", "Invoice", "W-2", "W-8BEN-E", "W-9", "Check", "Bank Statement"];
+const tabs = ["Receipt", "Invoice", "INE", "Pasaport", "Birth certificate", "Check", "Bank Statement"];
 
 const receiptData = {
   vendor: { name: "Walgreens", address: "191 E 3rd Ave, San Mateo, CA 94401, US", phone: "650-342-2723" },
@@ -25,9 +25,9 @@ const receiptData = {
 const sampleImages: Record<string, string> = {
   Receipt: "https://app.veryfi.com/api-demo/static/demos/receipt/receipt.jpeg",
   Invoice: "https://app.veryfi.com/api-demo/static/demos/invoice/invoice.png",
-  "W-2": "https://app.veryfi.com/api-demo/static/demos/w2/w2.png",
-  "W-8BEN-E": "https://app.veryfi.com/api-demo/static/demos/w8/w8.png",
-  "W-9": "https://app.veryfi.com/api-demo/static/demos/w9/w9.png",
+  INE: "https://app.veryfi.com/api-demo/static/demos/w2/w2.png",
+  Pasaport: "https://app.veryfi.com/api-demo/static/demos/w8/w8.png",
+  "Birth certificate": "https://app.veryfi.com/api-demo/static/demos/w9/w9.png",
   Check: "https://app.veryfi.com/api-demo/static/demos/check/check.png",
   "Bank Statement": "https://app.veryfi.com/api-demo/static/demos/bankstatement/bankstatement.png",
 };

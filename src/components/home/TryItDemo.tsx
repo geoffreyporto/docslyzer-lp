@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const tabs = ["Receipt", "Invoice", "W-2", "W-8BEN-E", "W-9", "Check", "Bank Statement"];
+const tabs = ["Receipt", "Invoice", "INE", "Pasaport", "Birth certificate", "Check", "Bank Statement"];
 
 const receiptData = {
   vendor: { name: "Walgreens", address: "191 E 3rd Ave, San Mateo, CA 94401, US", phone: "650-342-2723" },

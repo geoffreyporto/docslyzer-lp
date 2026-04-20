@@ -1,6 +1,13 @@
 import { useState } from "react";
+import demoReceipt from "@/assets/demo-receipt.jpg";
+import demoInvoice from "@/assets/demo-invoice.jpg";
 
 const tabs = ["Receipt", "Invoice", "INE", "Pasaport", "Birth certificate", "Check", "Bank Statement"];
+
+const sampleImages: Record<string, string> = {
+  Receipt: demoReceipt,
+  Invoice: demoInvoice,
+};
 
 const receiptData = {
   vendor: { name: "Walgreens", address: "191 E 3rd Ave, San Mateo, CA 94401, US", phone: "650-342-2723" },
@@ -55,12 +62,19 @@ const TryItDemo = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 mt-8">
           {/* Left: Document preview */}
           <div className="bg-card border border-border rounded-2xl p-6 flex flex-col items-center justify-center min-h-[400px]">
-            <img
-              src="https://app.docslyzer.com/api-demo/static/demos/receipt/receipt.jpeg"
-              alt="Sample receipt"
-              className="max-h-[350px] rounded-lg shadow-lg"
-              loading="lazy"
-            />
+            {sampleImages[activeTab] ? (
+              <img
+                src={sampleImages[activeTab]}
+                alt={`Sample ${activeTab.toLowerCase()}`}
+                className="max-h-[350px] rounded-lg shadow-lg"
+                loading="lazy"
+              />
+            ) : (
+              <div className="text-center text-muted-foreground text-sm">
+                <p className="font-medium text-foreground mb-2">{activeTab} sample</p>
+                <p>Coming soon</p>
+              </div>
+            )}
           </div>
 
           {/* Right: Extracted data */}

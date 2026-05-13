@@ -50,7 +50,7 @@ const leaders = [
   {
     name: "Vilson de Anastacio",
     title: "Partner / Advisor in Finance — Brazil",
-    image: null,
+    image: vilsonImg,
     bio: "Strategic finance partner and advisor supporting long-term capital and growth planning.",
   },
   {

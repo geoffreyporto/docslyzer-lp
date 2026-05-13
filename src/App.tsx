@@ -70,6 +70,8 @@ const App = () => (
           <Route path="/w9-ocr-api" element={<W9OcrApi />} />
           <Route path="/bank-statements-ocr-api" element={<BankStatementsOcrApi />} />
           <Route path="/developers" element={<Developers />} />
+          <Route path="/developers/docs" element={<Docs />} />
+
           <Route path="/solutions/legal" element={<Legal />} />
           <Route path="/solutions/constructors" element={<Constructors />} />
           <Route path="/solutions/notaries" element={<Notaries />} />

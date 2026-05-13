@@ -132,16 +132,6 @@ const Navbar = () => {
             <button className="p-2 text-muted-foreground hover:text-foreground transition-colors">
               <Search className="h-4 w-4" />
             </button>
-            <Link to="/login" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Login
-            </Link>
-            <Link
-              to="/register"
-              className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
-            >
-              Get Started for Free
-            </Link>
-          </div>) ? null : null}
             {user ? (
               <>
                 <span className="text-sm text-muted-foreground hidden xl:inline truncate max-w-[160px]">

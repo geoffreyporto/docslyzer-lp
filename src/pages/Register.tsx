@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, Mail, Lock, User, Building2, ArrowRight, AlertCircle } from "lucide-react";
+import { Check, Mail, Lock, User, Building2, ArrowRight, AlertCircle, Globe } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { supabase } from "@/integrations/supabase/client";
@@ -199,6 +199,22 @@ const Register = () => {
                         className="w-full bg-background border border-border rounded-lg pl-9 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                         maxLength={200}
                       />
+                    </div>
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium text-foreground mb-1.5">Country of operation *</label>
+                    <div className="relative">
+                      <Globe className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground pointer-events-none" />
+                      <select
+                        value={form.country}
+                        onChange={(e) => handleChange("country", e.target.value)}
+                        className="w-full bg-background border border-border rounded-lg pl-9 pr-4 py-2.5 text-sm text-foreground focus:outline-none focus:ring-2 focus:ring-primary/50 appearance-none"
+                      >
+                        <option value="MX">México</option>
+                        <option value="BR">Brasil</option>
+                        <option value="US">USA</option>
+                      </select>
                     </div>
                   </div>
 

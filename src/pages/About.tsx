@@ -8,13 +8,8 @@ import danielImg from "@/assets/team/daniel.png";
 import michellyImg from "@/assets/team/michelly.jpg";
 import greycianneImg from "@/assets/team/greycianne.jpg";
 import vilsonImg from "@/assets/team/vilson.png";
-
-const investors = [
-  { name: "New View Capital", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/new-view-capital.png", url: "https://nvc.vc/" },
-  { name: "Act One Ventures", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/act-one-ventures.png", url: "https://actoneventures.com/" },
-  { name: "Transpose Platform", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/transpose-platform.png", url: "#" },
-  { name: "Y Combinator", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/y-combinator.png", url: "https://www.ycombinator.com/" },
-];
+import jonathanImg from "@/assets/team/jonathan.png";
+import edivaniaImg from "@/assets/team/edivania.png";
 
 const leaders = [
   {
@@ -36,6 +31,12 @@ const leaders = [
     bio: "Chief Financial Officer at YMCA, Richmond, VA. Brings deep financial leadership and investment expertise.",
   },
   {
+    name: "Jonathan Solano",
+    title: "Entrepreneur & Investor",
+    image: jonathanImg,
+    bio: "Entrepreneur and investor backing innovative AI and technology ventures.",
+  },
+  {
     name: "Michelly Ribeiro",
     title: "Advisor in Finance — Brazil",
     image: michellyImg,
@@ -46,6 +47,12 @@ const leaders = [
     title: "Art Visual Director — Canada",
     image: greycianneImg,
     bio: "Creative Lead at The Mustard Seed. Leads the vision and creative impact through strategic direction alongside the Manager, Campaigns and Digital Fundraising.",
+  },
+  {
+    name: "Edivania Batista",
+    title: "Chemist / Biologist — Investor & PhD Student in Public Health",
+    image: edivaniaImg,
+    bio: "Chemist and biologist, investor, and PhD student in Public Health bridging science and impact-driven investment.",
   },
   {
     name: "Vilson de Anastacio",
@@ -106,17 +113,6 @@ const About = () => {
             </p>
           </section>
 
-          {/* Investors */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-10">Investors</h2>
-            <div className="flex flex-wrap items-center justify-center gap-10">
-              {investors.map((inv) => (
-                <a key={inv.name} href={inv.url} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
-                  <img src={inv.logo} alt={inv.name} className="h-12 w-auto" loading="lazy" />
-                </a>
-              ))}
-            </div>
-          </section>
 
           {/* Team Photo */}
           <section className="mb-20">

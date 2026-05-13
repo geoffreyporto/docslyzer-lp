@@ -1,12 +1,15 @@
 import { useState } from "react";
-import { Link } from "react-router-dom";
-import { Mail, Lock, ArrowRight } from "lucide-react";
+import { Link, useNavigate } from "react-router-dom";
+import { Mail, Lock, ArrowRight, AlertCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
 
 const Login = () => {
+  const navigate = useNavigate();
   const [form, setForm] = useState({ email: "", password: "" });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [authError, setAuthError] = useState<string | null>(null);
   const [loading, setLoading] = useState(false);
 
   const validate = () => {
@@ -16,25 +19,32 @@ const Login = () => {
     } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(form.email)) {
       newErrors.email = "Invalid email address";
     }
-    if (!form.password) {
-      newErrors.password = "Password is required";
-    }
+    if (!form.password) newErrors.password = "Password is required";
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setAuthError(null);
     if (!validate()) return;
     setLoading(true);
-    setTimeout(() => {
-      setLoading(false);
-    }, 1200);
+    const { error } = await supabase.auth.signInWithPassword({
+      email: form.email,
+      password: form.password,
+    });
+    setLoading(false);
+    if (error) {
+      setAuthError(error.message);
+      return;
+    }
+    navigate("/");
   };
 
   const handleChange = (field: string, value: string) => {
     setForm({ ...form, [field]: value });
     if (errors[field]) setErrors({ ...errors, [field]: "" });
+    if (authError) setAuthError(null);
   };
 
   return (
@@ -48,6 +58,12 @@ const Login = () => {
           </div>
 
           <div className="bg-card border border-border rounded-2xl p-8">
+            {authError && (
+              <div className="mb-5 flex items-start gap-2 bg-destructive/10 border border-destructive/30 rounded-lg p-3">
+                <AlertCircle className="h-4 w-4 text-destructive mt-0.5 flex-shrink-0" />
+                <p className="text-sm text-destructive">{authError}</p>
+              </div>
+            )}
             <form onSubmit={handleSubmit} className="space-y-5">
               <div>
                 <label className="block text-sm font-medium text-foreground mb-1.5">Email</label>
@@ -59,6 +75,7 @@ const Login = () => {
                     onChange={(e) => handleChange("email", e.target.value)}
                     className="w-full bg-background border border-border rounded-lg pl-9 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
                     maxLength={255}
+                    autoComplete="email"
                   />
                 </div>
                 {errors.email && <p className="text-xs text-destructive mt-1">{errors.email}</p>}
@@ -73,6 +90,7 @@ const Login = () => {
                     value={form.password}
                     onChange={(e) => handleChange("password", e.target.value)}
                     className="w-full bg-background border border-border rounded-lg pl-9 pr-4 py-2.5 text-sm text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-primary/50"
+                    autoComplete="current-password"
                   />
                 </div>
                 {errors.password && <p className="text-xs text-destructive mt-1">{errors.password}</p>}

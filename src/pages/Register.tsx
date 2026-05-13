@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, Mail, Lock, User, Building2, ArrowRight } from "lucide-react";
+import { Check, Mail, Lock, User, Building2, ArrowRight, AlertCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
 
 const Register = () => {
   const [form, setForm] = useState({
@@ -14,6 +15,7 @@ const Register = () => {
     confirmPassword: "",
   });
   const [errors, setErrors] = useState<Record<string, string>>({});
+  const [authError, setAuthError] = useState<string | null>(null);
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -38,20 +40,35 @@ const Register = () => {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
+    setAuthError(null);
     if (!validate()) return;
     setLoading(true);
-    // Simulate API call
-    setTimeout(() => {
-      setLoading(false);
-      setSubmitted(true);
-    }, 1200);
+    const { error } = await supabase.auth.signUp({
+      email: form.email,
+      password: form.password,
+      options: {
+        emailRedirectTo: `${window.location.origin}/`,
+        data: {
+          first_name: form.firstName,
+          last_name: form.lastName,
+          company: form.company,
+        },
+      },
+    });
+    setLoading(false);
+    if (error) {
+      setAuthError(error.message);
+      return;
+    }
+    setSubmitted(true);
   };
 
   const handleChange = (field: string, value: string) => {
     setForm({ ...form, [field]: value });
     if (errors[field]) setErrors({ ...errors, [field]: "" });
+    if (authError) setAuthError(null);
   };
 
   const benefits = [
@@ -117,6 +134,12 @@ const Register = () => {
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">
+                  {authError && (
+                    <div className="flex items-start gap-2 bg-destructive/10 border border-destructive/30 rounded-lg p-3">
+                      <AlertCircle className="h-4 w-4 text-destructive mt-0.5 flex-shrink-0" />
+                      <p className="text-sm text-destructive">{authError}</p>
+                    </div>
+                  )}
                   <div className="grid grid-cols-2 gap-4">
                     <div>
                       <label className="block text-sm font-medium text-foreground mb-1.5">First Name *</label>

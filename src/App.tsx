@@ -26,6 +26,8 @@ import W2OcrApi from "./pages/W2OcrApi.tsx";
 import W9OcrApi from "./pages/W9OcrApi.tsx";
 import BankStatementsOcrApi from "./pages/BankStatementsOcrApi.tsx";
 import Developers from "./pages/Developers.tsx";
+import Docs from "./pages/developers/Docs.tsx";
+
 import Legal from "./pages/solutions/Legal.tsx";
 import Constructors from "./pages/solutions/Constructors.tsx";
 import Notaries from "./pages/solutions/Notaries.tsx";

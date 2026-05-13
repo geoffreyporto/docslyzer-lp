@@ -13,9 +13,11 @@ const contactSchema = z.object({
 });
 
 const locations = [
-  { city: "Silicon Valley HQ", address: "210 S B St, San Mateo, CA 94401, California (PT)" },
-  { city: "Medellín, Colombia", address: "Calle 7D #43A-40, Medellín, Antioquia 050022" },
-  { city: "Sydney, Australia", address: "100 Harris St, Sydney, NSW 2009" },
+  {
+    city: "Dirección completa",
+    address:
+      "Calle Pico de Orizaba, Manzana 8 Lote 3, Número Interior 401, Colonia San Jeronimo Cuatro Vientos, C.P. 56589, Ixtapaluca, Estado de México.",
+  },
 ];
 
 const supportCards = [

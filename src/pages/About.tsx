@@ -133,10 +133,16 @@ const About = () => {
           {/* Leadership */}
           <section className="mb-20">
             <h2 className="text-3xl font-bold text-foreground text-center mb-10">Leadership</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {leaders.map((leader) => (
                 <div key={leader.name} className="bg-card border border-border rounded-2xl p-8 flex flex-col items-center text-center">
-                  <img src={leader.image} alt={leader.name} className="w-40 h-40 rounded-full object-cover mb-6" loading="lazy" />
+                  {leader.image ? (
+                    <img src={leader.image} alt={leader.name} className="w-40 h-40 rounded-full object-cover mb-6" loading="lazy" />
+                  ) : (
+                    <div className="w-40 h-40 rounded-full bg-muted flex items-center justify-center mb-6">
+                      <User className="h-16 w-16 text-muted-foreground" />
+                    </div>
+                  )}
                   <h3 className="text-xl font-bold text-foreground">{leader.name}</h3>
                   <p className="text-sm text-primary mb-4">{leader.title}</p>
                   <p className="text-sm text-muted-foreground">{leader.bio}</p>

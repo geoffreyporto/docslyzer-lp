@@ -35,6 +35,8 @@ import RealEstate from "./pages/solutions/RealEstate.tsx";
 import Fintech from "./pages/solutions/Fintech.tsx";
 import Education from "./pages/solutions/Education.tsx";
 import Register from "./pages/Register.tsx";
+import Login from "./pages/Login.tsx";
+
 
 import NotFound from "./pages/NotFound.tsx";
 
@@ -49,6 +51,8 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/register" element={<Register />} />
+          <Route path="/login" element={<Login />} />
+
 
           <Route path="/pricing" element={<Pricing />} />
           <Route path="/demo" element={<Demo />} />

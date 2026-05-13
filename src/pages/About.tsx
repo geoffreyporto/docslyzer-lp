@@ -113,17 +113,6 @@ const About = () => {
             </p>
           </section>
 
-          {/* Investors */}
-          <section className="mb-20">
-            <h2 className="text-3xl font-bold text-foreground text-center mb-10">Investors</h2>
-            <div className="flex flex-wrap items-center justify-center gap-10">
-              {investors.map((inv) => (
-                <a key={inv.name} href={inv.url} target="_blank" rel="noopener noreferrer" className="opacity-70 hover:opacity-100 transition-opacity">
-                  <img src={inv.logo} alt={inv.name} className="h-12 w-auto" loading="lazy" />
-                </a>
-              ))}
-            </div>
-          </section>
 
           {/* Team Photo */}
           <section className="mb-20">

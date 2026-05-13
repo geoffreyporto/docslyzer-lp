@@ -55,6 +55,7 @@ const Register = () => {
           first_name: form.firstName,
           last_name: form.lastName,
           company: form.company,
+          country: form.country,
         },
       },
     });

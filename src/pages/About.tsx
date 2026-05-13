@@ -10,6 +10,7 @@ import greycianneImg from "@/assets/team/greycianne.jpg";
 import vilsonImg from "@/assets/team/vilson.png";
 import jonathanImg from "@/assets/team/jonathan.png";
 import edivaniaImg from "@/assets/team/edivania.png";
+import tiagoImg from "@/assets/team/tiago.jpeg";
 
 const leaders = [
   {
@@ -63,7 +64,7 @@ const leaders = [
   {
     name: "Tiago de Anastacio",
     title: "Cloud Engineer — Brazil",
-    image: null,
+    image: tiagoImg,
     bio: "Cloud engineer focused on scalable, secure infrastructure powering Docslyzer's AI services.",
   },
 ];

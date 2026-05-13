@@ -2,6 +2,13 @@ import { useState, useCallback } from "react";
 import { Upload } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import demoReceipt from "@/assets/demo-receipt.jpg";
+import demoInvoice from "@/assets/demo-invoice.jpg";
+import demoIne from "@/assets/demo-ine.jpg";
+import demoPassport from "@/assets/demo-passport.jpg";
+import demoBirth from "@/assets/demo-birth.jpg";
+import demoCheck from "@/assets/demo-check.jpg";
+import demoBankStatement from "@/assets/demo-bankstatement.jpg";
 
 const tabs = ["Receipt", "Invoice", "INE", "Pasaport", "Birth certificate", "Check", "Bank Statement"];
 
@@ -23,13 +30,13 @@ const receiptData = {
 };
 
 const sampleImages: Record<string, string> = {
-  Receipt: "https://app.veryfi.com/api-demo/static/demos/receipt/receipt.jpeg",
-  Invoice: "https://app.veryfi.com/api-demo/static/demos/invoice/invoice.png",
-  INE: "https://app.veryfi.com/api-demo/static/demos/w2/w2.png",
-  Pasaport: "https://app.veryfi.com/api-demo/static/demos/w8/w8.png",
-  "Birth certificate": "https://app.veryfi.com/api-demo/static/demos/w9/w9.png",
-  Check: "https://app.veryfi.com/api-demo/static/demos/check/check.png",
-  "Bank Statement": "https://app.veryfi.com/api-demo/static/demos/bankstatement/bankstatement.png",
+  Receipt: demoReceipt,
+  Invoice: demoInvoice,
+  INE: demoIne,
+  Pasaport: demoPassport,
+  "Birth certificate": demoBirth,
+  Check: demoCheck,
+  "Bank Statement": demoBankStatement,
 };
 
 const Demo = () => {

@@ -32,6 +32,8 @@ import Notaries from "./pages/solutions/Notaries.tsx";
 import RealEstate from "./pages/solutions/RealEstate.tsx";
 import Fintech from "./pages/solutions/Fintech.tsx";
 import Education from "./pages/solutions/Education.tsx";
+import Register from "./pages/Register.tsx";
+
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();

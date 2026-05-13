@@ -26,6 +26,8 @@ import W2OcrApi from "./pages/W2OcrApi.tsx";
 import W9OcrApi from "./pages/W9OcrApi.tsx";
 import BankStatementsOcrApi from "./pages/BankStatementsOcrApi.tsx";
 import Developers from "./pages/Developers.tsx";
+import Docs from "./pages/developers/Docs.tsx";
+
 import Legal from "./pages/solutions/Legal.tsx";
 import Constructors from "./pages/solutions/Constructors.tsx";
 import Notaries from "./pages/solutions/Notaries.tsx";
@@ -70,6 +72,8 @@ const App = () => (
           <Route path="/w9-ocr-api" element={<W9OcrApi />} />
           <Route path="/bank-statements-ocr-api" element={<BankStatementsOcrApi />} />
           <Route path="/developers" element={<Developers />} />
+          <Route path="/developers/docs" element={<Docs />} />
+
           <Route path="/solutions/legal" element={<Legal />} />
           <Route path="/solutions/constructors" element={<Constructors />} />
           <Route path="/solutions/notaries" element={<Notaries />} />

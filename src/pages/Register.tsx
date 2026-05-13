@@ -11,6 +11,7 @@ const Register = () => {
     lastName: "",
     email: "",
     company: "",
+    country: "MX",
     password: "",
     confirmPassword: "",
   });

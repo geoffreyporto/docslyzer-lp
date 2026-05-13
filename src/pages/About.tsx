@@ -7,6 +7,7 @@ import davidImg from "@/assets/team/david.jpeg";
 import danielImg from "@/assets/team/daniel.png";
 import michellyImg from "@/assets/team/michelly.jpg";
 import greycianneImg from "@/assets/team/greycianne.jpg";
+import vilsonImg from "@/assets/team/vilson.png";
 
 const investors = [
   { name: "New View Capital", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/new-view-capital.png", url: "https://nvc.vc/" },
@@ -49,7 +50,7 @@ const leaders = [
   {
     name: "Vilson de Anastacio",
     title: "Partner / Advisor in Finance — Brazil",
-    image: null,
+    image: vilsonImg,
     bio: "Strategic finance partner and advisor supporting long-term capital and growth planning.",
   },
   {

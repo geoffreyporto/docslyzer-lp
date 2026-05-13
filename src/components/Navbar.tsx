@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { ChevronDown, Search, Menu, X } from "lucide-react";
+import { ChevronDown, Search, Menu, X, LogOut } from "lucide-react";
+import { useAuth } from "@/contexts/AuthContext";
 
 const navDropdowns: Record<string, { label: string; href: string; badge?: string; group?: string }[]> = {
   Solutions: [
@@ -45,6 +46,7 @@ const navDropdowns: Record<string, { label: string; href: string; badge?: string
 const Navbar = () => {
   const [openDropdown, setOpenDropdown] = useState<string | null>(null);
   const [mobileOpen, setMobileOpen] = useState(false);
+  const { user, signOut } = useAuth();
 
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-sm border-b border-border">
@@ -139,6 +141,32 @@ const Navbar = () => {
             >
               Get Started for Free
             </Link>
+          </div>) ? null : null}
+            {user ? (
+              <>
+                <span className="text-sm text-muted-foreground hidden xl:inline truncate max-w-[160px]">
+                  {user.email}
+                </span>
+                <button
+                  onClick={() => signOut()}
+                  className="flex items-center gap-1.5 bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  <LogOut className="h-3.5 w-3.5" /> Sign Out
+                </button>
+              </>
+            ) : (
+              <>
+                <Link to="/login" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Login
+                </Link>
+                <Link
+                  to="/register"
+                  className="bg-primary text-primary-foreground px-4 py-2 rounded-full text-sm font-medium hover:bg-primary/90 transition-colors"
+                >
+                  Get Started for Free
+                </Link>
+              </>
+            )}
           </div>
 
           {/* Mobile menu button */}

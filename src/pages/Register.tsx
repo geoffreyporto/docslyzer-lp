@@ -1,8 +1,9 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { Check, Mail, Lock, User, Building2, ArrowRight } from "lucide-react";
+import { Check, Mail, Lock, User, Building2, ArrowRight, AlertCircle } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
 
 const Register = () => {
   const [form, setForm] = useState({

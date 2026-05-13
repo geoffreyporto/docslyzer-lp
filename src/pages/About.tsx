@@ -1,7 +1,12 @@
 import { Link } from "react-router-dom";
-import { Check } from "lucide-react";
+import { Check, User } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import geoffreyImg from "@/assets/team/geoffrey.jpg";
+import davidImg from "@/assets/team/david.jpeg";
+import danielImg from "@/assets/team/daniel.png";
+import michellyImg from "@/assets/team/michelly.jpg";
+import greycianneImg from "@/assets/team/greycianne.jpg";
 
 const investors = [
   { name: "New View Capital", logo: "https://cdn.veryfi.com/wp-content/themes/veryfi_2.0/assets/images/investors/new-view-capital.png", url: "https://nvc.vc/" },
@@ -12,16 +17,46 @@ const investors = [
 
 const leaders = [
   {
-    name: "Ernest Semerda",
-    title: "Co-founder, Problem Solver",
-    image: "https://cdn.veryfi.com/wp-content/uploads/Ernest-Lifestyle-Square.jpg",
-    bio: "Ernest is a Polish-born, Australian-raised, and American-matured professional based in Silicon Valley. A serial entrepreneur, he previously founded a medical logistics company that connected hospitals to ambulances.",
+    name: "Geoffrey Porto",
+    title: "CTO / AI Software Engineer — Mexico",
+    image: geoffreyImg,
+    bio: "Co-Founder & AI Research at Tryggai/Monezify. AI Advisor at IAtros Systems. PhD Student in Computer Science, MSc in Artificial Intelligence, B.Sc Industrial Engineer.",
   },
   {
-    name: "Dmitry Birulia",
-    title: "Co-founder, Obstacle Crusher",
-    image: "https://cdn.veryfi.com/wp-content/uploads/Life-Style-Square-1.jpg",
-    bio: "Dmitry is a hacker and entrepreneur with an extensive background in Computer Vision and Machine Learning. Notably, he became the first Belarusian to participate in the prestigious YCombinator program.",
+    name: "David Melquiades",
+    title: "Business Development Director — Mexico",
+    image: davidImg,
+    bio: "Digital Transformation Strategist driving go-to-market and partnerships across LATAM.",
+  },
+  {
+    name: "Daniel Araujo",
+    title: "CFO / Investor — USA",
+    image: danielImg,
+    bio: "Chief Financial Officer at YMCA, Richmond, VA. Brings deep financial leadership and investment expertise.",
+  },
+  {
+    name: "Michelly Ribeiro",
+    title: "Advisor in Finance — Brazil",
+    image: michellyImg,
+    bio: "CEO at MR Finanças. Trusted advisor on financial strategy and corporate growth.",
+  },
+  {
+    name: "Greycianne Porto",
+    title: "Art Visual Director — Canada",
+    image: greycianneImg,
+    bio: "Creative Lead at The Mustard Seed. Leads the vision and creative impact through strategic direction alongside the Manager, Campaigns and Digital Fundraising.",
+  },
+  {
+    name: "Vilson de Anastacio",
+    title: "Partner / Advisor in Finance — Brazil",
+    image: null,
+    bio: "Strategic finance partner and advisor supporting long-term capital and growth planning.",
+  },
+  {
+    name: "Tiago de Anastacio",
+    title: "Cloud Engineer — Brazil",
+    image: null,
+    bio: "Cloud engineer focused on scalable, secure infrastructure powering Docslyzer's AI services.",
   },
 ];
 

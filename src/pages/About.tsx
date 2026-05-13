@@ -16,11 +16,11 @@ const leaders = [
     name: "Geoffrey Porto",
     title: "CTO / AI Software Engineer — Mexico",
     image: geoffreyImg,
-    bio: "Co-Founder & AI Research at Tryggai/Monezify. AI Advisor at IAtros Systems. PhD Student in Computer Science, MSc in Artificial Intelligence, B.Sc Industrial Engineer.",
+    bio: "Co-Founder & AI Research at Tryggai Intelligence Services. AI Advisor for Neuraliza / Monezify / IAtros Systems. PhD Student in Computer Science.",
   },
   {
     name: "David Melquiades",
-    title: "Business Development Director — Mexico",
+    title: "Co-founder Tryggai Intelligence Services | Business Development Director — Mexico",
     image: davidImg,
     bio: "Digital Transformation Strategist driving go-to-market and partnerships across LATAM.",
   },
@@ -32,7 +32,7 @@ const leaders = [
   },
   {
     name: "Jonathan Solano",
-    title: "Entrepreneur & Investor",
+    title: "Co-founder Tryggai Intelligence Services | Entrepreneur & Investor",
     image: jonathanImg,
     bio: "Entrepreneur and investor backing innovative AI and technology ventures.",
   },

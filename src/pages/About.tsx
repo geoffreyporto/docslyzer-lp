@@ -76,6 +76,29 @@ const apiFeatures = [
   "Flexible for everyone from startups to enterprise-scale deployments.",
 ];
 
+const timeline = [
+  {
+    year: "2022",
+    text: "In 2022, we began developing neural network and computer vision algorithms to classify patients with chest illnesses such as viral pneumonia, bacterial pneumonia, and COVID-19.",
+  },
+  {
+    year: "2023",
+    text: "In 2023, we began developing an AI platform capable of executing task and process workflows.",
+  },
+  {
+    year: "2024",
+    text: "In 2024, we re-engineered the platform to automate tasks using the first AI agents for the Docslyzer AI product.",
+  },
+  {
+    year: "2025",
+    text: "In 2025, we continued developing the agentic platform and the agentic products Docslyzer AI and Monefizy AI.",
+  },
+  {
+    year: "2026",
+    text: "In 2026 we are launching the first versions of these products for our customers in Mexico, Brazil and the USA after years of hard work in research and development that without our core team this would never be possible.",
+  },
+];
+
 const About = () => {
   return (
     <div className="min-h-screen bg-background">
@@ -100,16 +123,33 @@ const About = () => {
             </div>
           </div>
 
-          {/* 4th Industrial Revolution */}
+          {/* Our amazing story */}
           <section className="mb-20">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              🌍 Powering the Next Chapter of Human Innovation
+              🌍 Our amazing story
             </h2>
-            <p className="text-muted-foreground leading-relaxed mb-6">
-              Welcome to the 4th Industrial Revolution. While the world evolved from steam to electricity to digital, we're now witnessing something even bigger: AI isn't just another technological leap – it's humanity's next great power source. But here's the thing: only 13% of businesses have harnessed AI's true potential to slash costs and fuel growth. The rest? Still stuck in the manual data dark ages. That's where Docslyzer comes in.
+            <p className="text-muted-foreground leading-relaxed mb-10">
+              This journey began in 2021 in Brazil, when Software Engineer Geoffrey Porto was pursuing his Master's degree in Artificial Intelligence and seeking to solve a business problem. Here's his story...
             </p>
-            <p className="text-muted-foreground leading-relaxed">
-              We're not just building another tech platform. We're liberating human potential by transforming raw data into pure business power. Think of us as your guides into a future where manual data entry is as outdated as steam engines, where AI-driven insights fuel personalized experiences, and where businesses can finally focus on what matters: innovation and growth.
+
+            <div className="relative max-w-3xl">
+              <div className="absolute left-4 top-0 bottom-0 w-0.5 bg-primary/30" />
+              <div className="space-y-12">
+                {timeline.map((item) => (
+                  <div key={item.year} className="relative flex items-start gap-6">
+                    <div className="relative z-10 flex h-8 w-8 items-center justify-center rounded-full bg-primary text-primary-foreground text-xs font-bold shrink-0">
+                      {item.year}
+                    </div>
+                    <p className="text-muted-foreground leading-relaxed pt-1">
+                      {item.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <p className="text-muted-foreground leading-relaxed mt-12 font-medium">
+              Thanks Team.
             </p>
           </section>
 
